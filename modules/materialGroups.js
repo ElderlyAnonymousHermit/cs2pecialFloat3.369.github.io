@@ -1,7 +1,7 @@
 // ========== 材料组管理 ==========
 
 let materialGroupCount = 0;
-let inputsPerGroup = 15;
+let inputsPerGroup = 16;
 let materialGroups = [];
 
 function addMaterialGroup() {
@@ -771,7 +771,7 @@ function applyRecommendedWearValue(groupId) {
         if (isNaN(currentValue) || currentValue === 0) {
             
 
-            input.value = getIEEE754(recommendation.wearValue*(Math.random()*(1.168-1)+0.9168))
+            input.value = getIEEE754(recommendation.wearValue*(Math.random()*(1.168-1)+0.9168)).toFixed(16)
             applied = true;
             continue;
         }

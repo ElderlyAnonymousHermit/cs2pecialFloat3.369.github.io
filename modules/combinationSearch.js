@@ -327,12 +327,12 @@ function addResultToUI(result) {
         <div class="result-materials" title="${materialsStr.replace(/"/g, '&quot;')}">
             📦 材料组合: ${displayStr}
         </div>
-        <div class="result-average">
-            📊 平均百分比: ${result.averagePercent}
-        </div>
+         
         <div class="result-actions">
-            <button class="btn-use" onclick="useCombination(${resultId}); event.stopPropagation();">
-                ✅ 使用此组合（清除已用材料并新增到使用记录）
+            <button class="btn-use" title="使用此组合（ 并新增到使用记录）;"onclick="useCombination(${resultId}); event.stopPropagation();">
+                 保存  
+            </button> <button class="btn-use" title="使用此组合（ 并新增到使用记录）;"onclick="clearCombination(${resultId}); event.stopPropagation();">
+                 清除 
             </button>
         </div>
     `;
@@ -388,8 +388,20 @@ function selectResult(resultId) {
 function useCombination(resultId) {
     const result = foundCombinations[resultId];
     if (!result) return;
+ 
 
-    if (!confirm(`🎯 确定要使用这组材料吗？\n使用后 ${result.materials.length} 个材料将从输入框中移除。`)) {
+    addUsageHistory(result);
+     setTimeout(() => {
+        alert(`✅ 已保持到使用记录，如果清空了浏览器缓存，会导致丢失，请提前保持。`);
+    }, 600);
+
+     
+}
+function clearCombination(resultId) {
+    const result = foundCombinations[resultId];
+    if (!result) return;
+
+    if (!confirm(`🎯 确定要清除这组材料吗？\n清除后 ${result.materials.length} 个材料将从输入框中移除。`)) {
         return;
     }
 
@@ -416,7 +428,7 @@ function useCombination(resultId) {
         }
     });
 
-    addUsageHistory(result);
+   
     calculateAllPercentages();
 
     const resultItem = document.getElementById(`result_${resultId}`);
@@ -436,6 +448,15 @@ function useCombination(resultId) {
         alert(`✅ 成功移除 ${removedCount} 个材料！\n材料组合已应用。`);
     }, 600);
 }
+
+
+
+
+
+
+
+
+
 
 function renumberResults() {
     const resultsList = document.getElementById('resultsList');
