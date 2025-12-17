@@ -18,7 +18,7 @@
             <div class="tab">
                 <div class="tab-left">
                     <button class="tablinks active" onclick="openTab('floatCombosDiv')"
-                        style="background-color: #2563eb;">
+                         >
                         🎯 <span data-i18n="mainTab">特殊磨损材料组合生成器</span>
                     </button>
                     <button class="tablinks" onclick="openTab('tenComboDiv')">
@@ -57,17 +57,14 @@
                         </h1>
                       <div style="margin-left: 218px;"></div>   <div style="font-size: 88px;">广告位</div>
                     </div>
-                    <span style="color: #60a5fa; margin-bottom: 20px;"> 联系qq群：1604995891</span>
+                    <span style="display: flex; justify-content: center; align-items: center;"> 联系qq群：1604995891</span>
                 </div>
 
                 <div class="fc-global-controls">
                     <div class="control-group">
-                        <label data-i18n="materialsPerGroup">每组材料数量:</label>
-                        <input type="number" id="globalInputCount" min="1" max="30" value="15"
-                            onchange="updateAllMaterialGroups()">
+ 
                         <button onclick="addMaterialGroup()">➕ <span data-i18n="addGroup">添加材料组</span></button>
-                        <button onclick="calculateAllPercentages()" class="btn-calculate">📊 <span
-                                data-i18n="calculateAll">计算所有百分比</span></button>
+                         
                     </div>
 
                     <div class="combination-controls">

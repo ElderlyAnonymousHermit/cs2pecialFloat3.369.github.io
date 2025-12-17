@@ -14,30 +14,35 @@
     gap: 10px;
     margin-bottom: 20px;
 }
-
 .method-tab {
-    padding: 12px 24px;
-    background: #374151;
-    border: none;
-    border-radius: 8px;
-    color: white;
+    padding: 10px 20px;
+    background: #f8fafc; /* 浅灰色背景 */
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    color: #374151; /* 深灰色文字 */
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.2s ease;
+    font-weight: 500;
 }
 
 .method-tab.active {
-    background: #2563eb;
+    background: #3b82f6; /* 蓝色背景 */
+    color: white;
+    border-color: #3b82f6;
 }
 
 .method-tab:hover {
-    background: #1d4ed8;
+    background: #f1f5f9; /* 浅灰色悬停 */
+    border-color: #cbd5e1;
 }
 
 .finder-section {
-    background: #1f2937;
-    padding: 25px;
-    border-radius: 12px;
-    margin-bottom: 25px;
+    background: #ffffff; /* 白色背景 */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #e5e7eb; /* 浅灰色边框 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .filter-controls, .search-controls {
@@ -60,18 +65,25 @@
 }
 
 .filter-item label, .search-input-group label {
-    color: #60a5fa;
-    font-weight: bold;
-    margin-bottom: 5px;
+    color: #374151; /* 深灰色文字 */
+    font-weight: 600; /* 中等加粗 */
+    margin-bottom: 6px;
+    font-size: 14px;
 }
 
 .filter-item select, .search-input {
-    padding: 12px;
-    border: 2px solid #4b5563;
-    border-radius: 8px;
-    background: #374151;
-    color: white;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db; /* 浅灰色边框 */
+    border-radius: 6px;
+    background: #ffffff; /* 白色背景 */
+    color: #374151; /* 深灰色文字 */
     font-size: 14px;
+    transition: border-color 0.2s ease;
+}
+.filter-item select:focus, .search-input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
 .filter-actions, .search-actions {
@@ -80,18 +92,19 @@
 }
 
 .btn-find {
-    padding: 12px 30px;
-    background: #10b981;
+    padding: 10px 24px;
+    background: #3b82f6; /* 蓝色背景 */
     color: white;
     border: none;
-    border-radius: 8px;
-    font-size: 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.2s ease;
 }
 
 .btn-find:hover {
-    background: #059669;
+    background: #2563eb; /* 深蓝色悬停 */
 }
 
 .search-suggestions {
@@ -99,24 +112,26 @@
     top: 100%;
     left: 0;
     right: 0;
-    background: #374151;
-    border: 2px solid #4b5563;
-    border-radius: 8px;
+    background: #ffffff; /* 白色背景 */
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
     max-height: 200px;
     overflow-y: auto;
     z-index: 1000;
     display: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .search-suggestion-item {
-    padding: 12px 15px;
+    padding: 10px 12px;
     cursor: pointer;
-    border-bottom: 1px solid #4b5563;
+    border-bottom: 1px solid #f1f5f9;
     transition: background-color 0.2s;
+    color: #374151; /* 深灰色文字 */
 }
 
 .search-suggestion-item:hover {
-    background: #4b5563;
+    background: #f8fafc; /* 浅灰色悬停 */
 }
 
 .search-suggestion-item:last-child {
@@ -124,16 +139,18 @@
 }
 
 .finder-results {
-    background: #1f2937;
-    padding: 25px;
-    border-radius: 12px;
+    background: #ffffff; /* 白色背景 */
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb; /* 浅灰色边框 */
 }
 
 .target-item-info {
-    background: #374151;
-    padding: 20px;
-    border-radius: 8px;
+    background: #f8fafc; /* 浅灰色背景 */
+    padding: 16px;
+    border-radius: 6px;
     margin-bottom: 20px;
+    border: 1px solid #e5e7eb;
 }
 
 .target-item-header {
@@ -159,16 +176,15 @@
 }
 
 .target-item-name {
-    font-size: 18px;
-    font-weight: bold;
-    color: #60a5fa;
-    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e40af; /* 深蓝色 */
+    margin-bottom: 6px;
 }
-
 .target-item-collection, .target-item-quality, .target-item-wear, .target-item-tradeup {
-    color: #d1d5db;
-    margin-bottom: 5px;
-    font-size: 14px;
+    color: #6b7280; /* 中等灰色 */
+    margin-bottom: 4px;
+    font-size: 13px;
 }
 
 .materials-grid {
@@ -178,16 +194,17 @@
 }
 
 .material-card {
-    background: #374151;
-    padding: 20px;
-    border-radius: 8px;
-    border: 2px solid #4b5563;
-    transition: transform 0.2s;
+    background: #ffffff; /* 白色背景 */
+    padding: 16px;
+    border-radius: 6px;
+    border: 1px solid #e5e7eb; /* 浅灰色边框 */
+    transition: all 0.2s ease;
 }
 
 .material-card:hover {
     transform: translateY(-2px);
-    border-color: #60a5fa;
+    border-color: #3b82f6; /* 蓝色边框悬停 */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 .material-header {
@@ -213,22 +230,23 @@
 }
 
 .material-name {
-    font-weight: bold;
-    color: #60a5fa;
-    margin-bottom: 3px;
-}
-
-.material-quality {
-    color: #9ca3af;
+    font-weight: 600;
+    color: #1e40af; /* 深蓝色 */
+    margin-bottom: 4px;
     font-size: 14px;
 }
 
-.material-wear-range {
-    background: #1f2937;
-    padding: 12px;
-    border-radius: 6px;
+.material-quality {
+    color: #6b7280; /* 中等灰色 */
+    font-size: 13px;
 }
 
+.material-wear-range {
+    background: #f8fafc; /* 浅灰色背景 */
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #e5e7eb;
+}
 .wear-range-item {
     display: flex;
     justify-content: space-between;
@@ -240,13 +258,17 @@
 }
 
 .wear-label {
-    color: #9ca3af;
+    color: #6b7280; /* 中等灰色 */
+    font-size: 13px;
 }
 
 .wear-value {
-    color: #d1d5db;
-    font-weight: bold;
+    color: #374151; /* 深灰色 */
+    font-weight: 500;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
 }
+
 
 .no-materials {
     text-align: center;
@@ -298,12 +320,13 @@
     position: relative;
 }
 
-/* 同收藏品材料卡片 */
+/* 修改高亮样式 */
 .material-card[style*="border-left: 4px solid #10b981"] {
-    background: linear-gradient(90deg, rgba(16, 185, 129, 0.1) 0%, rgba(31, 41, 55, 1) 4%);
+    background: linear-gradient(90deg, rgba(16, 185, 129, 0.08) 0%, #ffffff 4%);
+    border-left: 4px solid #10b981 !important; /* 绿色左边框 */
 }
 
-/* 其他收藏品材料卡片 */
 .material-card[style*="border-left: 4px solid #f59e0b"] {
-    background: linear-gradient(90deg, rgba(245, 158, 11, 0.1) 0%, rgba(31, 41, 55, 1) 4%);
+    background: linear-gradient(90deg, rgba(245, 158, 11, 0.08) 0%, #ffffff 4%);
+    border-left: 4px solid #f59e0b !important; /* 橙色左边框 */
 }

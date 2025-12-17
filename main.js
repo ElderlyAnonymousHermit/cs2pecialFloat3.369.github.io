@@ -13,7 +13,7 @@ function openTab(tabName) {
         tab.style.display = 'none';
     });
     document.querySelectorAll('.tab button').forEach(btn => {
-        btn.style.backgroundColor = '#374151';
+        btn.style.backgroundColor = '#ffffffff';
     });
     document.getElementById(tabName).style.display = 'block';
     event.currentTarget.style.backgroundColor = '#2563eb';
@@ -24,6 +24,9 @@ function openTab(tabName) {
     }
     if (tabName === 'ieee754ConverterDiv') {
         setTimeout(initIEEE754Converter, 100);
+    }
+    if (tabName === 'materialRangeFinderDiv') {
+        setTimeout(initMaterialFinder, 100);
     }
 }
 // 更新组合UI
